@@ -1,0 +1,154 @@
+ train_number |       train_name        | events | avg_delay_min | max_delay_min | events_over_60min | delay_rank 
+--------------+-------------------------+--------+---------------+---------------+-------------------+------------
+ FR1006       | Central India Hauler    |     26 |         236.6 |          1440 |                18 |          1
+ FR1004       | BOXNHL                  |     15 |         180.6 |           287 |                15 |          2
+ FR1005       | BOXN                    |     30 |          91.0 |           184 |                20 |          3
+ FR1001       | Eastern Freight Express |     25 |          90.6 |           196 |                16 |          4
+ FR1008       | Deccan Bulk Carrier     |     19 |          86.3 |           144 |                15 |          5
+ FR1002       | North Cargo Express     |      9 |          18.6 |            75 |                 1 |          6
+ FR1003       | Coal Lifeline Express   |     12 |          16.7 |            24 |                 0 |          7
+ FR1007       | Gangetic Freight        |      7 |           1.0 |             1 |                 0 |          8
+(8 rows)
+
+   route    | shipments | avg_delay_min | max_delay_min 
+------------+-----------+---------------+---------------
+ ADI -> BSL |         1 |         538.0 |          1440
+ ADI -> HWH |         1 |         287.0 |           287
+ DDU -> BPL |         1 |         229.0 |           229
+ DDU -> GZB |         1 |         196.0 |           196
+ GZB -> NGP |         1 |         190.0 |           190
+ DLI -> BSL |         1 |         172.0 |           172
+ DLI -> KAN |         2 |         168.5 |           184
+ HWH -> BPL |         1 |         145.0 |           145
+ NGP -> KAN |         1 |         144.0 |           144
+ KAN -> BPL |         1 |         127.0 |           127
+ BSP -> ADI |         2 |         122.5 |           244
+ DDU -> BSL |         1 |         122.0 |           122
+ BSP -> BSL |         1 |          96.0 |            96
+ GZB -> KAN |         1 |          93.0 |            93
+ BPL -> DDU |         1 |          91.0 |            91
+ ADI -> BPL |         2 |          77.5 |           131
+ HWH -> KAN |         2 |          76.4 |            85
+ GZB -> DLI |         1 |          62.0 |            62
+ NGP -> BSP |         1 |          39.0 |            39
+ HWH -> DDU |         1 |          36.0 |            36
+ BSL -> DLI |         2 |          34.2 |            75
+ BSP -> DDU |         1 |          30.0 |            30
+ DLI -> NGP |         1 |          30.0 |            30
+ NGP -> DLI |         1 |          29.0 |            29
+ DLI -> HWH |         2 |          28.4 |            46
+ BSL -> HWH |         2 |          28.1 |            63
+ BSL -> GZB |         1 |          25.0 |            25
+ GZB -> BPL |         1 |          23.0 |            23
+ GZB -> HWH |         1 |           1.0 |             1
+ NGP -> BSL |         1 |           0.0 |             0
+ DLI -> GZB |         1 |           0.0 |             0
+(31 rows)
+
+ event_type | events | avg_delay_min 
+------------+--------+---------------
+ CHECKPOINT |     74 |         126.9
+ ARRIVAL    |     31 |         100.7
+ DEPARTURE  |     38 |          88.3
+(3 rows)
+
+ delivered | on_time | on_time_pct 
+-----------+---------+-------------
+        31 |       9 |        29.0
+(1 row)
+
+ train_number | delivered | on_time_pct 
+--------------+-----------+-------------
+ FR1008       |         4 |         0.0
+ FR1007       |         1 |         0.0
+ FR1002       |         2 |         0.0
+ FR1004       |         3 |         0.0
+ FR1005       |         6 |        33.3
+ FR1003       |         3 |        33.3
+ FR1006       |         6 |        50.0
+ FR1001       |         6 |        50.0
+(8 rows)
+
+ train_number | total | low | medium | high | critical | still_open 
+--------------+-------+-----+--------+------+----------+------------
+ FR1002       |     3 |   0 |      0 |    2 |        1 |          2
+ FR1006       |     2 |   0 |      1 |    1 |        0 |          1
+ FR1003       |     2 |   0 |      1 |    1 |        0 |          0
+ FR1005       |     2 |   0 |      1 |    1 |        0 |          0
+ FR1001       |     2 |   1 |      1 |    0 |        0 |          0
+ FR1008       |     2 |   1 |      0 |    0 |        1 |          1
+ FR1004       |     2 |   1 |      1 |    0 |        0 |          1
+(7 rows)
+
+   incident_type   | incidents | open 
+-------------------+-----------+------
+ SIGNAL_FAILURE    |         3 |    1
+ ENGINE_FAULT      |         3 |    1
+ BRAKE_FAILURE     |         2 |    2
+ WEATHER           |         2 |    0
+ TRACK_OBSTRUCTION |         2 |    0
+ OVERHEAD_WIRE     |         2 |    0
+ CARGO_DAMAGE      |         1 |    1
+(7 rows)
+
+   company_name   | shipments | total_tons | delayed | delayed_pct 
+------------------+-----------+------------+---------+-------------
+ Coal India       |         8 |   12440.00 |       0 |         0.0
+ NTPC             |         5 |    7004.00 |       2 |        40.0
+ Adani Ports      |         4 |    6127.00 |       0 |         0.0
+ IFFCO            |         4 |    6079.00 |       0 |         0.0
+ JSW Steel        |         3 |    5821.00 |       0 |         0.0
+ SAIL             |         4 |    5586.00 |       0 |         0.0
+ Hindalco         |         3 |    5384.00 |       2 |        66.7
+ Indian Oil       |         4 |    5115.00 |       0 |         0.0
+ Tata Steel       |         3 |    2951.00 |       0 |         0.0
+ UltraTech Cement |         2 |    2845.00 |       0 |         0.0
+(10 rows)
+
+  month  | shipments |   tons   
+---------+-----------+----------
+ 2026-08 |         8 | 12237.00
+ 2026-09 |        23 | 33363.00
+ 2026-10 |         9 | 13752.00
+(3 rows)
+
+    week    | events | avg_delay_min | change_vs_prev_week 
+------------+--------+---------------+---------------------
+ 2026-08-17 |      4 |          41.3 |                    
+ 2026-08-24 |     23 |          53.0 |                11.7
+ 2026-08-31 |     19 |          85.7 |                32.7
+ 2026-09-07 |     22 |         132.3 |                46.6
+ 2026-09-14 |     22 |         149.4 |                17.1
+ 2026-09-21 |     22 |          63.0 |               -86.4
+ 2026-09-28 |     21 |          90.9 |                27.9
+ 2026-10-05 |     10 |         336.7 |               245.8
+(8 rows)
+
+ train_number | capacity_tons | shipments | avg_load_tons | avg_load_pct 
+--------------+---------------+-----------+---------------+--------------
+ FR1001       |       3500.00 |         7 |          1596 |         45.6
+ FR1005       |       3470.00 |         8 |          1576 |         45.4
+ FR1004       |       4100.00 |         4 |          1827 |         44.6
+ FR1007       |       3200.00 |         2 |          1256 |         39.3
+ FR1008       |       5200.00 |         5 |          1620 |         31.2
+ FR1003       |       5000.00 |         4 |          1508 |         30.2
+ FR1006       |       4000.00 |         7 |          1181 |         29.5
+ FR1002       |       4200.00 |         3 |          1117 |         26.6
+(8 rows)
+
+ operation_id | train_number | event_type | delay_minutes | train_avg | z_score 
+--------------+--------------+------------+---------------+-----------+---------
+          142 | FR1006       | CHECKPOINT |          1440 |     236.6 |    3.31
+          143 | FR1006       | CHECKPOINT |          1440 |     236.6 |    3.31
+            2 | FR1002       | DEPARTURE  |            75 |      18.6 |    2.34
+(3 rows)
+
+ incident_id | train_number | incident_type  | severity |    incident_time    | days_open 
+-------------+--------------+----------------+----------+---------------------+-----------
+           5 | FR1002       | BRAKE_FAILURE  | CRITICAL | 2026-10-03 16:05:00 |         7
+          15 | FR1008       | ENGINE_FAULT   | CRITICAL | 2026-10-07 13:10:00 |         3
+          12 | FR1006       | BRAKE_FAILURE  | HIGH     | 2026-10-01 10:25:00 |         9
+           1 | FR1002       | SIGNAL_FAILURE | HIGH     | 2026-10-02 11:00:00 |         8
+           9 | FR1004       | CARGO_DAMAGE   | MEDIUM   | 2026-10-05 18:45:00 |         5
+(5 rows)
+
